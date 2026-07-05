@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>博客 on 我的个人博客</title>
-    <link>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2/</link>
+    <link>https://wyfblog.ccwu.cc/categories/%E5%8D%9A%E5%AE%A2/</link>
     <description>Recent content in 博客 on 我的个人博客</description>
     <generator>Hugo</generator>
-    <language>zh-cn</language>
+    <language>zh</language>
     <lastBuildDate>Sun, 05 Jul 2026 20:54:16 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wyfblog.ccwu.cc/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
+      <link>https://wyfblog.ccwu.cc/posts/hello-world/</link>
       <pubDate>Sun, 05 Jul 2026 20:54:16 +0800</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <guid>https://wyfblog.ccwu.cc/posts/hello-world/</guid>
       <description>我的第一篇博客文章</description>
     </item>
   </channel>
