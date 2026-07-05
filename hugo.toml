@@ -47,11 +47,7 @@ paginate = 10
 
   [[params.socialIcons]]
     name = 'github'
-    url = 'https://github.com/yourusername'
-
-  [[params.socialIcons]]
-    name = 'twitter'
-    url = 'https://twitter.com/yourusername'
+    url = 'https://github.com/wyfrj'
 
   [params.editPost]
     URL = 'https://github.com/yourusername/blog/edit/main/content'
