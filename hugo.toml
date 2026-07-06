@@ -1,6 +1,6 @@
 baseURL = 'https://wyfblog.ccwu.cc/'
 defaultContentLanguage = 'zh'
-title = '我的个人博客'
+title = 'wyfrg blog'
 theme = 'LoveIt'
 
 # 启用emoji
@@ -36,13 +36,13 @@ paginate = 10
     link = 'https://github.com/wyfrj'
 
   [params.homeInfo]
-    title = "欢迎来到我的博客"
+    title = "wyfrg blog"
     subtitle = "分享技术、生活与思考"
 
   [params.home.profile]
     enable = true
     avatarURL = ""
-    title = "欢迎来到我的博客"
+    title = "wyfrg blog"
     subtitle = ""
     typeit = false
     disclaimer = ""
