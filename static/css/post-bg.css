@@ -1,6 +1,6 @@
-/* 文章页面静态图片背景 */
+/* 文章页面静态图片背景 - 随页面滚动 */
 .image-background {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -13,12 +13,11 @@
 .image-bg-desktop,
 .image-bg-mobile {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
-    background-size: 100% auto;
+    height: 120%;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
 }
@@ -41,7 +40,7 @@
     
     .image-bg-mobile {
         display: block;
-        background-size: 100% auto;
+        background-size: cover;
     }
 }
 

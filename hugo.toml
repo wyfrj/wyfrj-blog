@@ -3,6 +3,13 @@ defaultContentLanguage = 'zh'
 title = 'wyfrg blog'
 theme = 'LoveIt'
 
+# 网站图标
+[params.favicon]
+  favicon = "/favicon.png"
+  icon16x16 = "/favicon.png"
+  icon32x32 = "/favicon.png"
+  app_touchIcon = "/favicon.png"
+
 # 启用emoji
 enableEmoji = true
 
