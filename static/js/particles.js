@@ -6,7 +6,7 @@
     
     canvas = document.createElement('canvas');
     canvas.id = 'particle-canvas';
-    canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;';
+    canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;';
     document.body.appendChild(canvas);
     ctx = canvas.getContext('2d');
     
@@ -20,11 +20,11 @@
     function Particle(x, y) {
         this.x = x;
         this.y = y;
-        this.size = Math.random() * 5 + 2;
-        this.speedX = (Math.random() - 0.5) * 3;
-        this.speedY = (Math.random() - 0.5) * 3;
+        this.size = Math.random() * 4 + 1;
+        this.speedX = (Math.random() - 0.5) * 2;
+        this.speedY = (Math.random() - 0.5) * 2;
         this.life = 1;
-        this.decay = Math.random() * 0.02 + 0.015;
+        this.decay = Math.random() * 0.02 + 0.02;
         this.hue = Math.random() * 60 + 200;
     }
     
@@ -32,13 +32,13 @@
         this.x += this.speedX;
         this.y += this.speedY;
         this.life -= this.decay;
-        this.size *= 0.98;
+        this.size *= 0.97;
     };
     
     Particle.prototype.draw = function() {
         ctx.save();
-        ctx.globalAlpha = this.life;
-        ctx.fillStyle = 'hsla(' + this.hue + ', 80%, 60%, ' + this.life + ')';
+        ctx.globalAlpha = this.life * 0.6;
+        ctx.fillStyle = 'hsla(' + this.hue + ', 80%, 60%, ' + (this.life * 0.6) + ')';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -50,8 +50,8 @@
         mouse.x = e.clientX;
         mouse.y = e.clientY;
         throttle++;
-        if (throttle % 2 === 0) {
-            for (var i = 0; i < 3; i++) {
+        if (throttle % 3 === 0) {
+            for (var i = 0; i < 2; i++) {
                 particles.push(new Particle(mouse.x, mouse.y));
             }
         }
@@ -62,12 +62,12 @@
         for (var i = particles.length - 1; i >= 0; i--) {
             particles[i].update();
             particles[i].draw();
-            if (particles[i].life <= 0 || particles[i].size <= 0.5) {
+            if (particles[i].life <= 0 || particles[i].size <= 0.3) {
                 particles.splice(i, 1);
             }
         }
-        if (particles.length > 150) {
-            particles.splice(0, particles.length - 150);
+        if (particles.length > 100) {
+            particles.splice(0, particles.length - 100);
         }
         requestAnimationFrame(animate);
     }
