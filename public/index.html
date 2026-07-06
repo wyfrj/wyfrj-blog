@@ -109,8 +109,16 @@
     <div class="search-dropdown mobile">
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
-                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"></div></div>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatar.png"
+        data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x"
+        data-sizes="auto"
+        alt="/images/avatar.png"
+        title="/images/avatar.png" /></div><h1 class="home-title">欢迎来到我的博客</h1><div class="home-subtitle">
+                    <div id="hitokoto" class="typeit">加载中...</div>
+                </div><div class="links"></div></div><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/wyf-is-daddy/">wyf是你爸爸</a>
     </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/wyfrj" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>wyf</a></span>&nbsp;<span class="post-publish"></span></div><div class="content"><p>看的是區</p></div><div class="post-footer">
         <a href="/posts/wyf-is-daddy/"></a></div>
@@ -119,7 +127,30 @@
     </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/wyfrj" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>wyf</a></span>&nbsp;<span class="post-publish"></span>&nbsp;<span class="post-category"></span></div><div class="content">我的第一篇博客文章</div><div class="post-footer">
         <a href="/posts/hello-world/"></a><div class="post-tags">
                 <i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%85%A5%E9%97%A8/">入门</a>,&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></div></div>
-</article></div></div>
+</article></div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('https://uapis.cn/api/v1/saying/random?mode=moment')
+            .then(response => response.json())
+            .then(data => {
+                let hitokoto = data.content || data.item?.content || '加载失败';
+                let author = data.author || data.item?.author || '';
+                let source = data.source || data.item?.source || '';
+                let display = hitokoto;
+                if (author || source) {
+                    display += ' —— ';
+                    if (author) display += author;
+                    if (source) display += '《' + source + '》';
+                }
+                document.getElementById('hitokoto').textContent = display;
+            })
+            .catch(error => {
+                console.error('获取一言失败:', error);
+                document.getElementById('hitokoto').textContent = '愿你一生努力，一生被爱';
+            });
+    });
+    </script></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/wyfrj" target="_blank">wyf</a></span></div>
@@ -129,5 +160,5 @@
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
                 <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script>window.config={"data":{"id-1":"This is my cool site"},"search":{"fuseIndexURL":"/index.json","fuseOpts":{"distance":100,"findAllMatches":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"minMatchCharLength":2,"threshold":0.3},"highlightTag":"em","maxResultLength":10,"noResultsFound":"","snippetLength":30,"type":"fuse"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script src="/js/theme.js"></script></body>
+        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"search":{"fuseIndexURL":"/index.json","fuseOpts":{"distance":100,"findAllMatches":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"minMatchCharLength":2,"threshold":0.3},"highlightTag":"em","maxResultLength":10,"noResultsFound":"","snippetLength":30,"type":"fuse"}};</script><script src="/js/theme.js"></script></body>
 </html>

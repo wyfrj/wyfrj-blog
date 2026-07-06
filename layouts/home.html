@@ -1,0 +1,141 @@
+{{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
+    {{- $profile := .Site.Params.home.profile -}}
+    {{- $posts := .Site.Params.home.posts -}}
+
+    <div class="page home"{{ if ne $posts.enable false }} data-home="posts"{{ end }}>
+        {{- /* Profile */ -}}
+        {{- if ne $profile.enable false -}}
+            <div class="home-profile">
+                {{- $avatar := $profile.avatarURL -}}
+                {{- if $avatar -}}
+                    <div class="home-avatar">
+                        {{- dict "Src" $avatar | partial "plugin/img.html" -}}
+                    </div>
+                {{- end -}}
+
+                {{- with $profile.title -}}
+                    <h1 class="home-title">
+                        {{- . | safeHTML -}}
+                    </h1>
+                {{- end -}}
+
+                <div class="home-subtitle">
+                    <div id="hitokoto" class="typeit">加载中...</div>
+                </div>
+
+                {{- if $profile.social -}}
+                    <div class="links">
+                        {{- $socialMap := resources.Get "data/social.yml" | transform.Unmarshal -}}
+                        {{- $socialArr := slice -}}
+                        {{- range $key, $value := .Site.Params.social -}}
+                            {{- $social := $key | lower | index $socialMap | default dict -}}
+                            {{- with $social.Alias -}}
+                                {{- $social = index $socialMap . | default dict -}}
+                            {{- end -}}
+                            {{- if $value -}}
+                                {{- if reflect.IsMap $value -}}
+                                    {{- with $value.weight -}}
+                                        {{- $social = dict "Weight" . | merge $social -}}
+                                    {{- end -}}
+                                    {{- with $value.prefix -}}
+                                        {{- $social = dict "Prefix" . | merge $social -}}
+                                    {{- end -}}
+                                    {{- with index $value "template" -}}
+                                        {{- $social = dict "Template" . | merge $social -}}
+                                    {{- end -}}
+                                    {{- with $value.id -}}
+                                        {{- $social = dict "Id" . | merge $social -}}
+                                    {{- end -}}
+                                    {{- with $value.url -}}
+                                        {{- $social = dict "Url" . | merge $social -}}
+                                    {{- end -}}
+                                    {{- with $value.title -}}
+                                        {{- $social = dict "Title" . | merge $social -}}
+                                    {{- end -}}
+                                    {{- with $value.newtab -}}
+                                        {{- $social = dict "Newtab" . | merge $social -}}
+                                    {{- end -}}
+                                    {{- with $value.icon -}}
+                                        {{- $social = dict "Icon" . | merge $social -}}
+                                    {{- end -}}
+                                    {{- with $value.rel -}}
+                                        {{- $social = dict "Rel" . | merge $social -}}
+                                    {{- end -}}
+                                {{- else if ne $value true -}}
+                                    {{- $social = dict "Id" $value | merge $social -}}
+                                {{- end -}}
+                                {{- if $social.Icon.Simpleicons -}}
+                                    {{- $prefix := ($.Scratch.Get "cdn" | default dict).simpleIconsPrefix -}}
+                                    {{- $social = dict "Prefix" $prefix | dict "Icon" | merge $social -}}
+                                {{- end -}}
+                                {{- $socialArr = $socialArr | append $social -}}
+                            {{- end -}}
+                        {{- end -}}
+                        {{- range sort $socialArr "Weight" -}}
+                            {{- partial "plugin/social.html" . -}}
+                        {{- end -}}
+                    </div>
+                {{- end -}}
+
+                {{- with $profile.disclaimer -}}
+                    <h3 class="home-disclaimer">
+                        {{- . | safeHTML -}}
+                    </h3>
+                {{- end -}}
+            </div>
+        {{- end -}}
+
+        {{- /* Content */ -}}
+        {{- if .Content -}}
+            <div class="single">
+                <div class="content" id="content">
+                    {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+                </div>
+            </div>
+        {{- end -}}
+
+        {{- /* Posts */ -}}
+        {{- if ne $posts.enable false | and .Site.RegularPages -}}
+            {{- /* Paginate */ -}}
+            {{- $pages := where .Site.RegularPages "Type" "posts" -}}
+            {{- if .Site.Params.page.hiddenFromHomePage -}}
+                {{- $pages = where $pages "Params.hiddenfromhomepage" false -}}
+            {{- else -}}
+                {{- $pages = where $pages "Params.hiddenfromhomepage" "!=" true -}}
+            {{- end -}}
+            {{- with $posts.paginate | default .Site.Params.paginate -}}
+                {{- $pages = $.Paginate $pages . -}}
+            {{- else -}}
+                {{- $pages = .Paginate $pages -}}
+            {{- end -}}
+            {{- range $pages.Pages -}}
+                {{- .Render "summary" -}}
+            {{- end -}}
+            {{- partial "paginator.html" . -}}
+        {{- end -}}
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('https://uapis.cn/api/v1/saying/random?mode=moment')
+            .then(response => response.json())
+            .then(data => {
+                let hitokoto = data.content || data.item?.content || '加载失败';
+                let author = data.author || data.item?.author || '';
+                let source = data.source || data.item?.source || '';
+                let display = hitokoto;
+                if (author || source) {
+                    display += ' —— ';
+                    if (author) display += author;
+                    if (source) display += '《' + source + '》';
+                }
+                document.getElementById('hitokoto').textContent = display;
+            })
+            .catch(error => {
+                console.error('获取一言失败:', error);
+                document.getElementById('hitokoto').textContent = '愿你一生努力，一生被爱';
+            });
+    });
+    </script>
+{{- end -}}
