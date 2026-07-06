@@ -44,8 +44,9 @@
         <link rel="stylesheet" href="/css/mobile-menu.css">
         <link rel="stylesheet" href="/css/bottom-nav.css">
         <link rel="stylesheet" href="/css/toc-custom.css">
+        <link rel="stylesheet" href="/css/post-bg.css">
     </head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+    <body data-header-desktop="fixed" data-header-mobile="auto" class="single-page"><script>
           const query = window.matchMedia('(prefers-color-scheme: dark)');
           function applyTheme() {
             let theme = window.localStorage?.getItem('theme') || 'auto';
@@ -56,75 +57,11 @@
 
           applyTheme();
           query.addEventListener('change', applyTheme);
-        </script><div class="video-background">
-            <video muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" id="bg-video" preload="none">
-                <source data-src="/video/background-mobile.mp4" type="video/mp4">
-            </video>
+        </script><div class="image-background">
+            <div class="image-bg-desktop" style="background-image: url('/images/post-bg-desktop.jpg');"></div>
+            <div class="image-bg-mobile" style="background-image: url('/images/post-bg-mobile.jpg');"></div>
             <div class="video-overlay"></div>
         </div>
-
-        <script>
-        
-        (function() {
-            var video = document.getElementById('bg-video');
-            if (!video) return;
-            
-            var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            var videoSrc = isMobile ? '/video/background-mobile.mp4' : '/video/background.mp4';
-            var loaded = false;
-            
-            function loadVideo() {
-                if (loaded) return;
-                loaded = true;
-                
-                var source = video.querySelector('source');
-                if (source) {
-                    source.src = videoSrc;
-                    video.load();
-                    
-                    var playPromise = video.play();
-                    if (playPromise !== undefined) {
-                        playPromise.catch(function() {
-                            
-                            document.body.addEventListener('touchstart', function playVideo() {
-                                video.play().catch(function() {});
-                                document.body.removeEventListener('touchstart', playVideo);
-                            }, false);
-                            
-                            document.body.addEventListener('click', function playVideoClick() {
-                                video.play().catch(function() {});
-                                document.body.removeEventListener('click', playVideoClick);
-                            });
-                        });
-                    }
-                }
-            }
-            
-            
-            if ('IntersectionObserver' in window) {
-                var observer = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            loadVideo();
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1 });
-                
-                observer.observe(video);
-            } else {
-                
-                loadVideo();
-            }
-            
-            
-            document.addEventListener('visibilitychange', function() {
-                if (!document.hidden && !loaded) {
-                    loadVideo();
-                }
-            });
-        })();
-        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">

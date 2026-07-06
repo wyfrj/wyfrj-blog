@@ -18,8 +18,9 @@
         <link rel="stylesheet" href="/css/mobile-menu.css">
         <link rel="stylesheet" href="/css/bottom-nav.css">
         <link rel="stylesheet" href="/css/toc-custom.css">
+        <link rel="stylesheet" href="/css/post-bg.css">
     </head>
-    <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
+    <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}"{{ if .IsPage }} class="single-page"{{ end }}>
         {{- /* Check theme isDark before body rendering */ -}}
         {{- $theme := .Site.Params.defaulttheme -}}
         <script>
@@ -35,7 +36,16 @@
           query.addEventListener('change', applyTheme);
         </script>
 
-        {{- /* Video Background */ -}}
+        {{- /* Background: Video for homepage, Image for single pages */ -}}
+        {{- if .IsPage }}
+        {{- /* 静态图片背景 - 文章页面 */ -}}
+        <div class="image-background">
+            <div class="image-bg-desktop" style="background-image: url('/images/post-bg-desktop.jpg');"></div>
+            <div class="image-bg-mobile" style="background-image: url('/images/post-bg-mobile.jpg');"></div>
+            <div class="video-overlay"></div>
+        </div>
+        {{- else }}
+        {{- /* 视频背景 - 首页 */ -}}
         <div class="video-background">
             <video muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" id="bg-video" preload="none">
                 <source data-src="/video/background-mobile.mp4" type="video/mp4">
@@ -105,6 +115,7 @@
             });
         })();
         </script>
+        {{- end }}
 
         <div id="mask"></div>
 

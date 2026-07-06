@@ -1,8 +1,9 @@
-/* 鼠标粒子跟随特效 */
+/* 鼠标粒子跟随特效 - 仅首页显示 */
 (function() {
     var canvas, ctx, particles = [], mouse = { x: 0, y: 0 }, isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     
-    if (isMobile) return;
+    // 文章页面不显示粒子特效
+    if (isMobile || document.body.classList.contains('single')) return;
     
     canvas = document.createElement('canvas');
     canvas.id = 'particle-canvas';
