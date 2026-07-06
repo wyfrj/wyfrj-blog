@@ -174,9 +174,10 @@
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><h1 class="home-title">wyfrg blog</h1><div class="home-subtitle">
-                    <div id="hitokoto" class="typeit">加载中...</div>
+                    <div id="hitokoto">加载中...</div>
                 </div><div class="links"></div></div></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/typeit@8/dist/typeit.umd.min.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         fetch('https://uapis.cn/api/v1/saying')
@@ -184,36 +185,26 @@
             .then(data => {
                 var hitokoto = data.text || '愿你一生努力，一生被爱';
                 var element = document.getElementById('hitokoto');
-                
-                
                 element.textContent = '';
                 
-                
-                new TypeIt('#hitokoto', {
+                new TypeIt(element, {
                     strings: [hitokoto],
                     speed: 100,
                     cursorSpeed: 1000,
                     cursorChar: '|',
                     duration: -1,
-                    startDelete: false,
-                    breakLines: false,
-                    startDelay: 0,
                     lifeLike: true,
                     loop: false
                 }).go();
             })
             .catch(error => {
                 console.error('获取一言失败:', error);
-                var fallback = '愿你一生努力，一生被爱';
                 new TypeIt('#hitokoto', {
-                    strings: [fallback],
+                    strings: ['愿你一生努力，一生被爱'],
                     speed: 100,
                     cursorSpeed: 1000,
                     cursorChar: '|',
                     duration: -1,
-                    startDelete: false,
-                    breakLines: false,
-                    startDelay: 0,
                     lifeLike: true,
                     loop: false
                 }).go();
