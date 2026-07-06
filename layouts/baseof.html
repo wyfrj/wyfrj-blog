@@ -13,6 +13,7 @@
         {{- partial "head/seo.html" . -}}
         <link rel="stylesheet" href="/css/video-bg.css">
         <link rel="stylesheet" href="/css/custom-cursor.css">
+        <link rel="stylesheet" href="/css/auth.css">
     </head>
     <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
         {{- /* Check theme isDark before body rendering */ -}}
@@ -123,5 +124,6 @@
 
         {{- /* Load JavaScript scripts and CSS */ -}}
         {{- partial "assets.html" . -}}
+        <script src="/js/auth.js"></script>
     </body>
 </html>
