@@ -7,6 +7,7 @@ categories: ['博客']
 tags: ['入门', '博客']
 showToc: true
 TocOpen: true
+author: 'wyf'
 ---
 
 # 欢迎来到我的博客

@@ -31,6 +31,10 @@ paginate = 10
   TocOpen = true
   comments = false
 
+  [params.author]
+    name = 'wyf'
+    link = 'https://github.com/wyfrj'
+
   [params.homeInfo]
     title = "欢迎来到我的博客"
     subtitle = "分享技术、生活与思考"
