@@ -41,7 +41,7 @@ paginate = 10
 
   [params.home.profile]
     enable = true
-    avatarURL = "/images/avatar.png"
+    avatarURL = ""
     title = "欢迎来到我的博客"
     subtitle = ""
     typeit = false
