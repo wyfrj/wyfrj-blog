@@ -31,21 +31,26 @@ paginate = 10
   TocOpen = true
   comments = true
 
-  # Giscus评论系统配置
-  [params.comment.giscus]
-    enable = true
-    repo = "wyfrj/wyfrj-blog"
-    repoId = "R_kgDOTOO8zg"
-    category = "Announcements"
-    categoryId = "DIC_kwDOTOO8zs4DAnGd"
-    lang = "zh-CN"
-    mapping = "pathname"
-    reactionsEnabled = "1"
-    emitMetadata = "0"
-    inputPosition = "bottom"
-    lazyLoading = false
-    lightTheme = "light"
-    darkTheme = "dark"
+  # 页面级评论配置
+  [params.page]
+    [params.page.comment]
+      enable = true
+
+      # Giscus评论系统配置
+      [params.page.comment.giscus]
+        enable = true
+        repo = "wyfrj/wyfrj-blog"
+        repoId = "R_kgDOTOO8zg"
+        category = "Announcements"
+        categoryId = "DIC_kwDOTOO8zs4DAnGd"
+        lang = "zh-CN"
+        mapping = "pathname"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lazyLoading = false
+        lightTheme = "light"
+        darkTheme = "dark"
 
   [params.author]
     name = 'wyf'
