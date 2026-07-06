@@ -39,14 +39,6 @@ paginate = 10
     title = "欢迎来到我的博客"
     subtitle = "分享技术、生活与思考"
 
-  [params.home.profile]
-    enable = true
-    avatarURL = "/images/avatar.png"
-    title = "欢迎来到我的博客"
-    subtitle = ""
-    typeit = false
-    disclaimer = ""
-
   [[params.socialIcons]]
     name = 'github'
     url = 'https://github.com/wyfrj'
