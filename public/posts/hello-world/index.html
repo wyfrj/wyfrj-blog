@@ -42,7 +42,8 @@
                 "name": "xxxx"
             },"description": ""
     }
-    </script></head>
+    </script><link rel="stylesheet" href="/css/video-bg.css">
+    </head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script>
           const query = window.matchMedia('(prefers-color-scheme: dark)');
           function applyTheme() {
@@ -54,7 +55,12 @@
 
           applyTheme();
           query.addEventListener('change', applyTheme);
-        </script>
+        </script><div class="video-background">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="/video/background.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -176,11 +182,6 @@
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
                 <i class="fas fa-arrow-up" aria-hidden="true"></i>
-            </a>
-        </div>
-
-        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="">
-                <i class="fas fa-comment" aria-hidden="true"></i>
             </a>
         </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"search":{"fuseIndexURL":"/index.json","fuseOpts":{"distance":100,"findAllMatches":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"minMatchCharLength":2,"threshold":0.3},"highlightTag":"em","maxResultLength":10,"noResultsFound":"","snippetLength":30,"type":"fuse"}};</script><script src="/js/theme.js"></script></body>
 </html>
