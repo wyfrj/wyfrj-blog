@@ -1,11 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>wyfrg blog</title>
-        <link>https://wyfblog.ccwu.cc/</link>
-        <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Mon, 06 Jul 2026 00:00:00 &#43;0000</lastBuildDate>
-            <atom:link href="https://wyfblog.ccwu.cc/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+        <title>技术教程 - category - wyfrg blog</title>
+        <link>https://wyfblog.ccwu.cc/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/</link>
+        <description>技术教程 - category - wyfrg blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Mon, 06 Jul 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://wyfblog.ccwu.cc/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
     <title>电脑新手入门教程：从零开始学电脑</title>
     <link>https://wyfblog.ccwu.cc/posts/%E7%94%B5%E8%84%91%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
     <pubDate>Mon, 06 Jul 2026 00:00:00 &#43;0000</pubDate>

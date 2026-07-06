@@ -2,7 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://wyfblog.ccwu.cc/categories/</loc></url><url>
-            <loc>https://wyfblog.ccwu.cc/tags/</loc></url><url>
-            <loc>https://wyfblog.ccwu.cc/</loc></url><url>
+            <loc>https://wyfblog.ccwu.cc/categories/</loc><lastmod>2026-07-06T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://wyfblog.ccwu.cc/posts/</loc><lastmod>2026-07-06T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://wyfblog.ccwu.cc/tags/</loc><lastmod>2026-07-06T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://wyfblog.ccwu.cc/</loc><lastmod>2026-07-06T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://wyfblog.ccwu.cc/tags/%E7%94%B5%E8%84%91%E6%95%99%E7%A8%8B/</loc><lastmod>2026-07-06T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://wyfblog.ccwu.cc/posts/%E7%94%B5%E8%84%91%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</loc><lastmod>2026-07-06T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://wyfblog.ccwu.cc/tags/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</loc><lastmod>2026-07-06T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://wyfblog.ccwu.cc/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/</loc><lastmod>2026-07-06T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://wyfblog.ccwu.cc/tags/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/</loc><lastmod>2026-07-06T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://wyfblog.ccwu.cc/search/</loc></url></urlset>
