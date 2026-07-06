@@ -45,7 +45,7 @@
           applyTheme();
           query.addEventListener('change', applyTheme);
         </script><div class="video-background">
-            <video autoplay muted loop playsinline webkit-playsinline id="bg-video">
+            <video autoplay muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" id="bg-video">
                 <source src="/video/background.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
@@ -53,23 +53,29 @@
 
         <script>
         
-        document.addEventListener('DOMContentLoaded', function() {
+        (function() {
             var video = document.getElementById('bg-video');
-            if (video) {
-                
-                var playPromise = video.play();
-                if (playPromise !== undefined) {
-                    playPromise.then(function() {
-                        
-                    }).catch(function(error) {
-                        
-                        document.addEventListener('touchstart', function() {
-                            video.play();
-                        }, { once: true });
-                    });
-                }
+            if (!video) return;
+            
+            
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function() {
+                    
+                    document.body.addEventListener('touchstart', function playVideo() {
+                        video.play().catch(function() {});
+                        document.body.removeEventListener('touchstart', playVideo);
+                    }, false);
+                });
             }
-        });
+            
+            
+            document.addEventListener('visibilitychange', function() {
+                if (!document.hidden && video.paused) {
+                    video.play().catch(function() {});
+                }
+            });
+        })();
         </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">

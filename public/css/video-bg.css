@@ -7,6 +7,7 @@
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    background-color: #000;
 }
 
 .video-background video {
@@ -50,12 +51,20 @@ body[theme="light"] .video-overlay {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Mobile optimizations */
+/* Mobile and iOS optimizations */
 @media (max-width: 768px) {
     .video-background video {
         min-width: 100vw;
         min-height: 100vh;
         width: 100vw;
         height: 100vh;
+    }
+}
+
+/* iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+    .video-background video {
+        -webkit-transform: translate(-50%, -50%) scale(1.1);
+        transform: translate(-50%, -50%) scale(1.1);
     }
 }

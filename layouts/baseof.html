@@ -31,31 +31,37 @@
 
         {{- /* Video Background */ -}}
         <div class="video-background">
-            <video autoplay muted loop playsinline webkit-playsinline id="bg-video">
+            <video autoplay muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" id="bg-video">
                 <source src="/video/background.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
         </div>
 
         <script>
-        // Handle video autoplay on mobile devices
-        document.addEventListener('DOMContentLoaded', function() {
+        // Handle video autoplay on iOS
+        (function() {
             var video = document.getElementById('bg-video');
-            if (video) {
-                // Try to play video
-                var playPromise = video.play();
-                if (playPromise !== undefined) {
-                    playPromise.then(function() {
-                        // Video played successfully
-                    }).catch(function(error) {
-                        // Auto-play was prevented, try on first user interaction
-                        document.addEventListener('touchstart', function() {
-                            video.play();
-                        }, { once: true });
-                    });
-                }
+            if (!video) return;
+            
+            // Try to play immediately
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function() {
+                    // Auto-play was prevented, add touch listener
+                    document.body.addEventListener('touchstart', function playVideo() {
+                        video.play().catch(function() {});
+                        document.body.removeEventListener('touchstart', playVideo);
+                    }, false);
+                });
             }
-        });
+            
+            // Also try on page visibility change
+            document.addEventListener('visibilitychange', function() {
+                if (!document.hidden && video.paused) {
+                    video.play().catch(function() {});
+                }
+            });
+        })();
         </script>
 
         <div id="mask"></div>
