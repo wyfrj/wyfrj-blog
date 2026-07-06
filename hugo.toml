@@ -58,7 +58,8 @@ paginate = 10
 
   [params.homeInfo]
     title = "wyfrg blog"
-    subtitle = "分享技术、生活与思考"
+    subtitle = "加载中..."
+    typeit = true
 
   [params.home.profile]
     enable = true
@@ -67,6 +68,18 @@ paginate = 10
     subtitle = ""
     typeit = false
     disclaimer = ""
+
+  # TypeIt 配置
+  [params.typeit]
+    speed = 100
+    cursorSpeed = 1000
+    cursorChar = "|"
+    duration = -1
+    startDelete = false
+    breakLines = false
+    startDelay = 0
+    lifeLike = true
+    loop = false
 
   [[params.socialIcons]]
     name = 'github'
