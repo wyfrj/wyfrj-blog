@@ -29,7 +29,23 @@ paginate = 10
   showReadingTime = true
   showToc = true
   TocOpen = true
-  comments = false
+  comments = true
+
+  # Giscus评论系统配置
+  [params.comment.giscus]
+    enable = true
+    repo = "wyfrj/wyfrj-blog"
+    repoId = "R_kgDOTOO8zg"
+    category = "Announcements"
+    categoryId = "DIC_kwDOTOO8zs4DAnGd"
+    lang = "zh-CN"
+    mapping = "pathname"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lazyLoading = false
+    lightTheme = "light"
+    darkTheme = "dark"
 
   [params.author]
     name = 'wyf'
