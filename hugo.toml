@@ -1,7 +1,7 @@
 baseURL = 'https://wyfblog.ccwu.cc/'
 defaultContentLanguage = 'zh'
 title = '我的个人博客'
-theme = 'hugo-blog-awesome'
+theme = 'LoveIt'
 
 # 启用emoji
 enableEmoji = true
@@ -18,8 +18,8 @@ paginate = 10
 
 # 输出配置
 [outputs]
-  home = ["HTML", "RSS"]
-  section = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS", "JSON"]
   taxonomy = ["HTML", "RSS"]
 
 # 主题配置
@@ -27,10 +27,13 @@ paginate = 10
   defaultTheme = 'auto'
   showShareButtons = false
   showReadingTime = true
+  showToc = true
+  TocOpen = true
+  comments = false
 
-  [params.homeInfoParams]
-    Title = '欢迎来到我的博客'
-    Content = '分享技术、生活与思考'
+  [params.homeInfo]
+    title = "欢迎来到我的博客"
+    subtitle = "分享技术、生活与思考"
 
   [[params.socialIcons]]
     name = 'github'
