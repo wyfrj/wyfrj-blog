@@ -31,11 +31,32 @@
 
         {{- /* Video Background */ -}}
         <div class="video-background">
-            <video autoplay muted loop playsinline id="bg-video">
+            <video autoplay muted loop playsinline webkit-playsinline id="bg-video">
                 <source src="/video/background.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
         </div>
+
+        <script>
+        // Handle video autoplay on mobile devices
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('bg-video');
+            if (video) {
+                // Try to play video
+                var playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(function() {
+                        // Video played successfully
+                    }).catch(function(error) {
+                        // Auto-play was prevented, try on first user interaction
+                        document.addEventListener('touchstart', function() {
+                            video.play();
+                        }, { once: true });
+                    });
+                }
+            }
+        });
+        </script>
 
         <div id="mask"></div>
 

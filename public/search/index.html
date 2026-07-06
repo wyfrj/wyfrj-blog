@@ -51,11 +51,32 @@
           applyTheme();
           query.addEventListener('change', applyTheme);
         </script><div class="video-background">
-            <video autoplay muted loop playsinline id="bg-video">
+            <video autoplay muted loop playsinline webkit-playsinline id="bg-video">
                 <source src="/video/background.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
         </div>
+
+        <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('bg-video');
+            if (video) {
+                
+                var playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(function() {
+                        
+                    }).catch(function(error) {
+                        
+                        document.addEventListener('touchstart', function() {
+                            video.play();
+                        }, { once: true });
+                    });
+                }
+            }
+        });
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
