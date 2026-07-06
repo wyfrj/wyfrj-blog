@@ -1,0 +1,47 @@
+/* 滚动动画 - 文章卡片进入视口时有动画 */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 交错动画效果 */
+.scroll-animate:nth-child(1) { transition-delay: 0.1s; }
+.scroll-animate:nth-child(2) { transition-delay: 0.2s; }
+.scroll-animate:nth-child(3) { transition-delay: 0.3s; }
+.scroll-animate:nth-child(4) { transition-delay: 0.4s; }
+.scroll-animate:nth-child(5) { transition-delay: 0.5s; }
+
+/* 文章列表卡片动画 */
+.post-entry {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.3s ease;
+}
+
+.post-entry.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.post-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 页脚动画 */
+.footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

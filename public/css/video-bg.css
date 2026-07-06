@@ -29,6 +29,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease;
 }
 
 /* Ensure content is readable over video */
@@ -42,13 +43,32 @@ body {
     z-index: 1;
 }
 
-/* Dark theme adjustments */
+/* Dark theme adjustments - 视频背景更暗，文字更清晰 */
 body[theme="dark"] .video-overlay {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.75);
 }
 
+body[theme="dark"] .video-background video {
+    filter: brightness(0.7) saturate(0.8);
+}
+
+/* Light theme - 保持原有亮度 */
 body[theme="light"] .video-overlay {
     background: rgba(255, 255, 255, 0.3);
+}
+
+body[theme="light"] .video-background video {
+    filter: brightness(1) saturate(1);
+}
+
+/* 自动模式跟随系统 */
+@media (prefers-color-scheme: dark) {
+    body:not([theme="light"]) .video-overlay {
+        background: rgba(0, 0, 0, 0.75);
+    }
+    body:not([theme="light"]) .video-background video {
+        filter: brightness(0.7) saturate(0.8);
+    }
 }
 
 /* Mobile and iOS optimizations */

@@ -13,6 +13,10 @@
         {{- partial "head/seo.html" . -}}
         <link rel="stylesheet" href="/css/video-bg.css">
         <link rel="stylesheet" href="/css/custom-cursor.css">
+        <link rel="stylesheet" href="/css/page-load.css">
+        <link rel="stylesheet" href="/css/scroll-animate.css">
+        <link rel="stylesheet" href="/css/mobile-menu.css">
+        <link rel="stylesheet" href="/css/bottom-nav.css">
     </head>
     <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
         {{- /* Check theme isDark before body rendering */ -}}
@@ -121,7 +125,76 @@
             </a>
         </div>
 
+        {{- /* Mobile Bottom Navigation */ -}}
+        <nav class="bottom-nav">
+            <a href="/" class="bottom-nav-item active">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="/posts/" class="bottom-nav-item">
+                <i class="fas fa-book"></i>
+                <span>文章</span>
+            </a>
+            <a href="/tags/" class="bottom-nav-item">
+                <i class="fas fa-tags"></i>
+                <span>标签</span>
+            </a>
+            <a href="/archives/" class="bottom-nav-item">
+                <i class="fas fa-archive"></i>
+                <span>归档</span>
+            </a>
+            <a href="https://github.com/wyfrj" class="bottom-nav-item" target="_blank">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        </nav>
+
         {{- /* Load JavaScript scripts and CSS */ -}}
         {{- partial "assets.html" . -}}
+        
+        {{- /* Load custom scripts */ -}}
+        <script src="/js/particles.js"></script>
+        <script src="/js/scroll-animate.js"></script>
+        
+        {{- /* Mobile menu toggle script */ -}}
+        <script>
+        (function() {
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (!isMobile) return;
+            
+            var toggle = document.getElementById('menu-toggle-mobile');
+            var menu = document.getElementById('menu-mobile');
+            
+            if (toggle && menu) {
+                toggle.addEventListener('click', function() {
+                    toggle.classList.toggle('active');
+                    menu.classList.toggle('active');
+                });
+                
+                // Close menu when clicking a link
+                var links = menu.querySelectorAll('.menu-item');
+                links.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        toggle.classList.remove('active');
+                        menu.classList.remove('active');
+                    });
+                });
+            }
+            
+            // Highlight current page in bottom nav
+            var currentPath = window.location.pathname;
+            var bottomNavItems = document.querySelectorAll('.bottom-nav-item');
+            bottomNavItems.forEach(function(item) {
+                var href = item.getAttribute('href');
+                if (href === currentPath || (href !== '/' && currentPath.startsWith(href))) {
+                    item.classList.add('active');
+                } else if (href === '/' && currentPath === '/') {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        })();
+        </script>
     </body>
 </html>

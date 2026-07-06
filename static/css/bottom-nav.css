@@ -1,0 +1,144 @@
+/* 移动端底部固定导航栏 */
+@media (max-width: 768px) {
+    /* 隐藏移动端顶部菜单 */
+    #header-mobile {
+        display: none !important;
+    }
+    
+    /* 主内容区域留出底部空间 */
+    .main {
+        padding-bottom: 70px;
+    }
+    
+    /* 底部导航栏样式 */
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: env(safe-area-inset-bottom);
+        animation: slideUp 0.4s ease-out;
+    }
+    
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    
+    /* 深色模式 */
+    body[theme="dark"] .bottom-nav {
+        background: rgba(30, 30, 30, 0.95);
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* 导航项样式 */
+    .bottom-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #666;
+        font-size: 10px;
+        padding: 8px 12px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    body[theme="dark"] .bottom-nav-item {
+        color: #999;
+    }
+    
+    .bottom-nav-item i {
+        font-size: 20px;
+        margin-bottom: 4px;
+        transition: transform 0.3s ease;
+    }
+    
+    .bottom-nav-item:hover,
+    .bottom-nav-item.active {
+        color: #1a73e8;
+    }
+    
+    body[theme="dark"] .bottom-nav-item:hover,
+    body[theme="dark"] .bottom-nav-item.active {
+        color: #8ab4f8;
+    }
+    
+    .bottom-nav-item:hover i,
+    .bottom-nav-item.active i {
+        transform: scale(1.1);
+    }
+    
+    /* 活跃指示器 */
+    .bottom-nav-item.active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 24px;
+        height: 3px;
+        background: #1a73e8;
+        border-radius: 0 0 3px 3px;
+    }
+    
+    body[theme="dark"] .bottom-nav-item.active::before {
+        background: #8ab4f8;
+    }
+    
+    /* 首页（一言）特殊样式 */
+    .bottom-nav-item.hitokoto {
+        position: relative;
+    }
+    
+    .bottom-nav-item.hitokoto .hitokoto-tooltip {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 12px;
+        white-space: nowrap;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        margin-bottom: 8px;
+    }
+    
+    .bottom-nav-item.hitokoto:hover .hitokoto-tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* 返回顶部按钮 */
+    #back-to-top {
+        display: none;
+    }
+}
+
+/* 桌面端保持原样 */
+@media (min-width: 769px) {
+    .bottom-nav {
+        display: none;
+    }
+}

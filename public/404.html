@@ -22,6 +22,10 @@
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><link rel="stylesheet" href="/css/video-bg.css">
         <link rel="stylesheet" href="/css/custom-cursor.css">
+        <link rel="stylesheet" href="/css/page-load.css">
+        <link rel="stylesheet" href="/css/scroll-animate.css">
+        <link rel="stylesheet" href="/css/mobile-menu.css">
+        <link rel="stylesheet" href="/css/bottom-nav.css">
     </head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script>
           const query = window.matchMedia('(prefers-color-scheme: dark)');
@@ -183,5 +187,66 @@
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
                 <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"search":{"fuseIndexURL":"/index.json","fuseOpts":{"distance":100,"findAllMatches":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"minMatchCharLength":2,"threshold":0.3},"highlightTag":"em","maxResultLength":10,"noResultsFound":"","snippetLength":30,"type":"fuse"}};</script><script src="/js/theme.js"></script></body>
+        </div><nav class="bottom-nav">
+            <a href="/" class="bottom-nav-item active">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="/posts/" class="bottom-nav-item">
+                <i class="fas fa-book"></i>
+                <span>文章</span>
+            </a>
+            <a href="/tags/" class="bottom-nav-item">
+                <i class="fas fa-tags"></i>
+                <span>标签</span>
+            </a>
+            <a href="/archives/" class="bottom-nav-item">
+                <i class="fas fa-archive"></i>
+                <span>归档</span>
+            </a>
+            <a href="https://github.com/wyfrj" class="bottom-nav-item" target="_blank">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        </nav><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"search":{"fuseIndexURL":"/index.json","fuseOpts":{"distance":100,"findAllMatches":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"minMatchCharLength":2,"threshold":0.3},"highlightTag":"em","maxResultLength":10,"noResultsFound":"","snippetLength":30,"type":"fuse"}};</script><script src="/js/theme.js"></script><script src="/js/particles.js"></script>
+        <script src="/js/scroll-animate.js"></script><script>
+        (function() {
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (!isMobile) return;
+            
+            var toggle = document.getElementById('menu-toggle-mobile');
+            var menu = document.getElementById('menu-mobile');
+            
+            if (toggle && menu) {
+                toggle.addEventListener('click', function() {
+                    toggle.classList.toggle('active');
+                    menu.classList.toggle('active');
+                });
+                
+                
+                var links = menu.querySelectorAll('.menu-item');
+                links.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        toggle.classList.remove('active');
+                        menu.classList.remove('active');
+                    });
+                });
+            }
+            
+            
+            var currentPath = window.location.pathname;
+            var bottomNavItems = document.querySelectorAll('.bottom-nav-item');
+            bottomNavItems.forEach(function(item) {
+                var href = item.getAttribute('href');
+                if (href === currentPath || (href !== '/' && currentPath.startsWith(href))) {
+                    item.classList.add('active');
+                } else if (href === '/' && currentPath === '/') {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        })();
+        </script>
+    </body>
 </html>
