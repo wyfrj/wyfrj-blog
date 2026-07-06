@@ -3,7 +3,7 @@ const Auth = {
     // Supabase 配置
     config: {
         url: 'https://sruhsitckdvvghzssek.supabase.co',
-        anonKey: 'sb_publishable_t3FNobmMgJPw17ufyO6PMw_jrIDOEYH'
+        anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNydWhzaXRja2R2dmdmaHpzc2VrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMzMzc1OTAsImV4cCI6MjA5ODkxMzU5MH0.Q5zInj3yn10n2nMhRVhgXzoAViIM8favchwufGxsdH0'
     },
     
     // Supabase 客户端
