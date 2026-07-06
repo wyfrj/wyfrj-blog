@@ -10,6 +10,14 @@ details summary, select, label {
     cursor: url('/images/cursor/link.png'), pointer !important;
 }
 
+/* Text input cursor */
+input[type="text"], input[type="search"], input[type="email"], 
+input[type="password"], input[type="number"], input[type="url"],
+input[type="tel"], textarea, [contenteditable="true"],
+.search-input, #search-input, .search-box input {
+    cursor: url('/images/cursor/text.png'), text !important;
+}
+
 /* Hide default cursor on elements with custom cursor */
 video {
     cursor: url('/images/cursor/pointer.png'), default !important;
