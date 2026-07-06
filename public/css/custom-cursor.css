@@ -1,0 +1,16 @@
+/* Custom Cursor Styles */
+* {
+    cursor: url('/images/cursor/pointer.png'), auto !important;
+}
+
+a, button, input[type="button"], input[type="submit"], 
+[role="button"], .link, .post-title a, .home-title a,
+.nav-link, .menu-item a, .tag-link, .category-link,
+details summary, select, label {
+    cursor: url('/images/cursor/link.png'), pointer !important;
+}
+
+/* Hide default cursor on elements with custom cursor */
+video {
+    cursor: url('/images/cursor/pointer.png'), default !important;
+}
