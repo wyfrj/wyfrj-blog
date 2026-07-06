@@ -31,48 +31,70 @@
 
         {{- /* Video Background */ -}}
         <div class="video-background">
-            <video autoplay muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" id="bg-video">
-                <source src="/video/background-mobile.mp4" type="video/mp4">
+            <video muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" id="bg-video" preload="none">
+                <source data-src="/video/background-mobile.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
         </div>
 
         <script>
-        // Handle video autoplay on iOS
+        // Video lazy loading with Intersection Observer
         (function() {
             var video = document.getElementById('bg-video');
             if (!video) return;
             
-            // Detect mobile device
             var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            var videoSrc = isMobile ? '/video/background-mobile.mp4' : '/video/background.mp4';
+            var loaded = false;
             
-            // Set appropriate video source
-            if (!isMobile) {
-                video.src = '/video/background.mp4';
-            }
-            
-            // Try to play immediately
-            var playPromise = video.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(function() {
-                    // Auto-play was prevented, add touch listener
-                    document.body.addEventListener('touchstart', function playVideo() {
-                        video.play().catch(function() {});
-                        document.body.removeEventListener('touchstart', playVideo);
-                    }, false);
+            function loadVideo() {
+                if (loaded) return;
+                loaded = true;
+                
+                var source = video.querySelector('source');
+                if (source) {
+                    source.src = videoSrc;
+                    video.load();
                     
-                    // Also try on click for desktop
-                    document.body.addEventListener('click', function playVideoClick() {
-                        video.play().catch(function() {});
-                        document.body.removeEventListener('click', playVideoClick);
-                    });
-                });
+                    var playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(function() {
+                            // Auto-play was prevented, add interaction listeners
+                            document.body.addEventListener('touchstart', function playVideo() {
+                                video.play().catch(function() {});
+                                document.body.removeEventListener('touchstart', playVideo);
+                            }, false);
+                            
+                            document.body.addEventListener('click', function playVideoClick() {
+                                video.play().catch(function() {});
+                                document.body.removeEventListener('click', playVideoClick);
+                            });
+                        });
+                    }
+                }
             }
             
-            // Also try on page visibility change
+            // Use Intersection Observer if available
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            loadVideo();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                observer.observe(video);
+            } else {
+                // Fallback: load immediately
+                loadVideo();
+            }
+            
+            // Also load on page visibility change
             document.addEventListener('visibilitychange', function() {
-                if (!document.hidden && video.paused) {
-                    video.play().catch(function() {});
+                if (!document.hidden && !loaded) {
+                    loadVideo();
                 }
             });
         })();
