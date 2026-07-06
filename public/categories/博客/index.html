@@ -36,7 +36,7 @@
           query.addEventListener('change', applyTheme);
         </script><div class="video-background">
             <video autoplay muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" id="bg-video">
-                <source src="/video/background.mp4" type="video/mp4">
+                <source src="/video/background-mobile.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
         </div>
@@ -48,6 +48,14 @@
             if (!video) return;
             
             
+            var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            
+            if (!isMobile) {
+                video.src = '/video/background.mp4';
+            }
+            
+            
             var playPromise = video.play();
             if (playPromise !== undefined) {
                 playPromise.catch(function() {
@@ -56,6 +64,12 @@
                         video.play().catch(function() {});
                         document.body.removeEventListener('touchstart', playVideo);
                     }, false);
+                    
+                    
+                    document.body.addEventListener('click', function playVideoClick() {
+                        video.play().catch(function() {});
+                        document.body.removeEventListener('click', playVideoClick);
+                    });
                 });
             }
             

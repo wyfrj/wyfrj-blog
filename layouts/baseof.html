@@ -32,7 +32,7 @@
         {{- /* Video Background */ -}}
         <div class="video-background">
             <video autoplay muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" id="bg-video">
-                <source src="/video/background.mp4" type="video/mp4">
+                <source src="/video/background-mobile.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
         </div>
@@ -43,6 +43,14 @@
             var video = document.getElementById('bg-video');
             if (!video) return;
             
+            // Detect mobile device
+            var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            // Set appropriate video source
+            if (!isMobile) {
+                video.src = '/video/background.mp4';
+            }
+            
             // Try to play immediately
             var playPromise = video.play();
             if (playPromise !== undefined) {
@@ -52,6 +60,12 @@
                         video.play().catch(function() {});
                         document.body.removeEventListener('touchstart', playVideo);
                     }, false);
+                    
+                    // Also try on click for desktop
+                    document.body.addEventListener('click', function playVideoClick() {
+                        video.play().catch(function() {});
+                        document.body.removeEventListener('click', playVideoClick);
+                    });
                 });
             }
             
