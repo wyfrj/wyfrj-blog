@@ -428,25 +428,17 @@ body[theme="dark"] #toc-auto::-webkit-scrollbar-thumb {
 .single-page {
     position: relative;
     background-color: #1a1a2e;
-}
-.single-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url('/images/post-bg-desktop.jpg');
     background-size: auto;
     background-position: top center;
     background-repeat: no-repeat;
-    z-index: -1;
+    background-attachment: scroll;
 }
-body[theme="dark"] .single-page::before {
+body[theme="dark"] .single-page {
     filter: brightness(0.6);
 }
 @media (max-width: 768px) {
-    .single-page::before {
+    .single-page {
         background-image: url('/images/post-bg-mobile.jpg');
         background-size: cover;
         background-position: center;
@@ -766,4 +758,28 @@ body[theme="dark"] .busuanzi-counter .counter-value {
     display: flex;
     align-items: center;
     float: none;
+}
+/* 搜索按钮 - 添加边框让其可见 */
+#header-desktop .menu .search input {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+body[theme="dark"] #header-desktop .menu .search input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+/* 暗色模式按钮 - 确保图标可见 */
+#header-desktop .menu .theme-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+#header-desktop .menu .theme-switch i {
+    font-size: 1rem;
+    color: #333;
+}
+body[theme="dark"] #header-desktop .menu .theme-switch i {
+    color: #fff;
 }
