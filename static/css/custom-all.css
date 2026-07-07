@@ -746,8 +746,3 @@ body[theme="dark"] .busuanzi-counter .counter-label {
 body[theme="dark"] .busuanzi-counter .counter-value {
     color: #8ab4f8;
 }
-
-/* ====== HEADER布局修复 - 减小左边距防止右侧按钮被裁切 ====== */
-#header-desktop .header-wrapper {
-    padding: 0 2rem 0 2rem;
-}
