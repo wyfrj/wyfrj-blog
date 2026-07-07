@@ -1,10 +1,10 @@
-/* 文章页面静态图片背景 - 随页面滚动，原始大小 */
+/* 文章页面静态图片背景 - 固定在视口，内容滚动 */
 .single-page {
     background-image: url('/images/post-bg-desktop.jpg');
     background-size: auto;
     background-position: top center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-color: #1a1a2e;
 }
 
@@ -14,6 +14,7 @@
         background-image: url('/images/post-bg-mobile.jpg');
         background-size: auto;
         background-position: top center;
+        background-attachment: fixed;
     }
 }
 
