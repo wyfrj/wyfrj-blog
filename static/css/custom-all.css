@@ -754,3 +754,16 @@ body[theme="dark"] .busuanzi-counter .counter-label {
 body[theme="dark"] .busuanzi-counter .counter-value {
     color: #8ab4f8;
 }
+
+/* --- 修复header溢出 - 搜索和暗色模式按钮显示 --- */
+#header-desktop .header-wrapper {
+    padding: 0 2rem 0 2rem;
+}
+#header-desktop .header-wrapper .menu {
+    overflow: visible;
+}
+#header-desktop .header-wrapper .menu .menu-inner {
+    display: flex;
+    align-items: center;
+    float: none;
+}
