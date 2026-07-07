@@ -1,6 +1,6 @@
 /* 文章页面静态图片背景 - 随页面滚动 */
 .image-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -16,9 +16,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 120%;
+    height: 100%;
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -52,7 +52,8 @@
     border-radius: 12px;
     padding: 30px;
     margin: 20px 0;
-    max-width: 800px;
+    position: relative;
+    z-index: 2;
 }
 
 body[theme="dark"] .single-page .single {
@@ -88,6 +89,8 @@ body[theme="dark"] .single-page #content h2 {
     top: 100px !important;
     width: 220px !important;
     max-width: 220px !important;
+    visibility: visible !important;
+    z-index: 100;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 8px;
