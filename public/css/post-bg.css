@@ -1,8 +1,8 @@
-/* 文章页面静态图片背景 - 随页面滚动 */
+/* 文章页面静态图片背景 - 随页面滚动，原始大小 */
 .single-page {
     background-image: url('/images/post-bg-desktop.jpg');
-    background-size: 100% auto;
-    background-position: center top;
+    background-size: auto;
+    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-color: #1a1a2e;
@@ -12,7 +12,8 @@
 @media (max-width: 768px) {
     .single-page {
         background-image: url('/images/post-bg-mobile.jpg');
-        background-size: 100% auto;
+        background-size: auto;
+        background-position: top center;
     }
 }
 
