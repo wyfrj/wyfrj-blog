@@ -1,6 +1,6 @@
 /* 文章页面静态图片背景 - 随页面滚动 */
 .image-background {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
