@@ -20,6 +20,14 @@
     height: auto;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .video-overlay {
@@ -30,6 +38,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     transition: background 0.3s ease;
+    will-change: opacity;
 }
 
 /* Ensure content is readable over video */

@@ -20,6 +20,13 @@ pygmentsUseClasses = true
 # 启用RSS
 enableRobotsTXT = true
 
+# 启用Sitemap
+enableSitemap = true
+
+# CDN配置 (国内加速)
+[params.cdn]
+  data = "bootcdn.yml"
+
 # 分页设置
 paginate = 10
 
@@ -29,14 +36,72 @@ paginate = 10
   section = ["HTML", "RSS", "JSON"]
   taxonomy = ["HTML", "RSS"]
 
+# Sitemap配置
+[sitemap]
+  changefreq = "daily"
+  filename = "sitemap.xml"
+  priority = 0.5
+
 # 主题配置
 [params]
   defaultTheme = 'auto'
-  showShareButtons = false
+  showShareButtons = true
   showReadingTime = true
   showToc = true
   TocOpen = true
   comments = true
+  
+  # 描述信息
+  description = "分享技术、生活与思考的个人博客"
+
+  # Header config
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = ""
+      name = "wyfrg blog"
+      pre = ""
+      post = ""
+      typeit = false
+
+  # Footer config
+  [params.footer]
+    enable = true
+    custom = ""
+    hugo = true
+    copyright = true
+    author = true
+    since = 2022
+
+  # Open Graph配置
+  [params.opengraph]
+    enable = true
+    logo = "/images/logo.png"
+    
+  # Twitter卡片
+  [params.twitter]
+    enable = true
+    card = "summary_large_image"
+
+  # 分享配置
+  [params.share]
+    enable = true
+    
+  # 相关文章配置
+  [params.related]
+    enable = true
+    maxSameCategory = 3
+    includeNewer = true
+    threshold = 80
+    toLower = true
+    
+    [[params.related.indices]]
+      name = "tags"
+      weight = 100
+    [[params.related.indices]]
+      name = "categories"
+      weight = 80
 
   # 页面级评论配置
   [params.page]
@@ -58,6 +123,24 @@ paginate = 10
         lazyLoading = false
         lightTheme = "light"
         darkTheme = "dark"
+
+  # 全局评论配置
+  [params.comment]
+    enable = true
+    [params.comment.giscus]
+      enable = true
+      repo = "wyfrj/wyfrj-blog"
+      repoId = "R_kgDOTOO8zg"
+      category = "Announcements"
+      categoryId = "DIC_kwDOTOO8zs4DAnGd"
+      lang = "zh-CN"
+      mapping = "pathname"
+      reactionsEnabled = "1"
+      emitMetadata = "0"
+      inputPosition = "bottom"
+      lazyLoading = false
+      lightTheme = "light"
+      darkTheme = "dark"
 
   [params.author]
     name = 'wyf'

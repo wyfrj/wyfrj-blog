@@ -119,15 +119,22 @@
     <script src="https://cdn.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('https://uapis.cn/api/v1/saying')
+        // 使用曹星宇句子集，获取中文语录
+        fetch('https://uapis.cn/api/v1/saying/random?source=caoxingyu%20sentence')
             .then(response => response.json())
             .then(data => {
-                var hitokoto = data.text || '愿你一生努力，一生被爱';
+                var hitokoto = data.content || '愿你一生努力，一生被爱';
+                var author = data.author ? '—— ' + data.author : '';
+                var source = data.source ? '《' + data.source + '》' : '';
+                var displayText = hitokoto;
+                if (author || source) {
+                    displayText += '\n' + author + ' ' + source;
+                }
                 var element = document.getElementById('hitokoto');
                 element.textContent = '';
                 
                 new TypeIt(element, {
-                    strings: [hitokoto],
+                    strings: [displayText],
                     speed: 100,
                     cursorSpeed: 1000,
                     cursorChar: '|',
@@ -138,6 +145,7 @@
             })
             .catch(error => {
                 console.error('获取一言失败:', error);
+                // 备用：随机中文语录
                 new TypeIt('#hitokoto', {
                     strings: ['愿你一生努力，一生被爱'],
                     speed: 100,

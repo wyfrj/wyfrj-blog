@@ -1,0 +1,37 @@
+/* 不蒜子访客统计样式 */
+.busuanzi-counter {
+    text-align: center;
+    padding: 15px 0;
+    color: #666;
+    font-size: 13px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+}
+
+body[theme="dark"] .busuanzi-counter {
+    color: #999;
+    border-top-color: #333;
+}
+
+.busuanzi-counter .counter-item {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.busuanzi-counter .counter-label {
+    color: #888;
+    margin-right: 4px;
+}
+
+body[theme="dark"] .busuanzi-counter .counter-label {
+    color: #777;
+}
+
+.busuanzi-counter .counter-value {
+    color: #1a73e8;
+    font-weight: 500;
+}
+
+body[theme="dark"] .busuanzi-counter .counter-value {
+    color: #8ab4f8;
+}

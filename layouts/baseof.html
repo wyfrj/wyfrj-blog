@@ -11,14 +11,11 @@
         {{- partial "head/meta.html" . -}}
         {{- partial "head/link.html" . -}}
         {{- partial "head/seo.html" . -}}
-        <link rel="stylesheet" href="/css/video-bg.css">
-        <link rel="stylesheet" href="/css/custom-cursor.css">
-        <link rel="stylesheet" href="/css/page-load.css">
-        <link rel="stylesheet" href="/css/scroll-animate.css">
-        <link rel="stylesheet" href="/css/mobile-menu.css">
-        <link rel="stylesheet" href="/css/bottom-nav.css">
-        <link rel="stylesheet" href="/css/toc-custom.css">
-        <link rel="stylesheet" href="/css/post-bg.css">
+        <link rel="stylesheet" href="/css/custom-all.css">
+        <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="preconnect" href="https://uapis.cn" crossorigin>
+        <link rel="preconnect" href="https://busuanzi.ibruce.info" crossorigin>
     </head>
     <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}"{{ if .IsPage }} class="single-page"{{ end }}>
         {{- /* Check theme isDark before body rendering */ -}}
@@ -42,70 +39,47 @@
         {{- else }}
         {{- /* 视频背景 - 首页 */ -}}
         <div class="video-background">
-            <video muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" id="bg-video" preload="none">
-                <source data-src="/video/background-mobile.mp4" type="video/mp4">
+            <video muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" id="bg-video" preload="metadata" style="object-fit:cover;">
+                <source src="/video/background-mobile.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
         </div>
 
         <script>
-        // Video lazy loading with Intersection Observer
         (function() {
             var video = document.getElementById('bg-video');
             if (!video) return;
             
-            var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            var videoSrc = isMobile ? '/video/background-mobile.mp4' : '/video/background.mp4';
-            var loaded = false;
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             
-            function loadVideo() {
-                if (loaded) return;
-                loaded = true;
-                
-                var source = video.querySelector('source');
-                if (source) {
-                    source.src = videoSrc;
-                    video.load();
-                    
-                    var playPromise = video.play();
-                    if (playPromise !== undefined) {
-                        playPromise.catch(function() {
-                            // Auto-play was prevented, add interaction listeners
-                            document.body.addEventListener('touchstart', function playVideo() {
-                                video.play().catch(function() {});
-                                document.body.removeEventListener('touchstart', playVideo);
-                            }, false);
-                            
-                            document.body.addEventListener('click', function playVideoClick() {
-                                video.play().catch(function() {});
-                                document.body.removeEventListener('click', playVideoClick);
-                            });
-                        });
-                    }
-                }
-            }
-            
-            // Use Intersection Observer if available
-            if ('IntersectionObserver' in window) {
-                var observer = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            loadVideo();
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1 });
-                
-                observer.observe(video);
+            // 移动端使用移动端视频
+            if (isMobile) {
+                video.querySelector('source').src = '/video/background-mobile.mp4';
             } else {
-                // Fallback: load immediately
-                loadVideo();
+                video.querySelector('source').src = '/video/background.mp4';
             }
             
-            // Also load on page visibility change
+            video.load();
+            
+            // 尝试自动播放
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function() {
+                    // 自动播放被阻止，添加交互监听
+                    function playVideo() {
+                        video.play().catch(function() {});
+                        document.removeEventListener('touchstart', playVideo);
+                        document.removeEventListener('click', playVideo);
+                    }
+                    document.addEventListener('touchstart', playVideo, false);
+                    document.addEventListener('click', playVideo, false);
+                });
+            }
+            
+            // 页面可见时恢复播放
             document.addEventListener('visibilitychange', function() {
-                if (!document.hidden && !loaded) {
-                    loadVideo();
+                if (!document.hidden && video.paused) {
+                    video.play().catch(function() {});
                 }
             });
         })();
@@ -160,7 +134,9 @@
         {{- partial "assets.html" . -}}
         
         {{- /* Load custom scripts */ -}}
-        <script src="/js/scroll-animate.js"></script>
+        <script defer src="/js/scroll-animate.js"></script>
+        <script defer src="/js/blog-enhance.js"></script>
+        <script defer src="/js/lightbox.js"></script>
         
         {{- /* Mobile menu toggle script */ -}}
         <script>
@@ -202,5 +178,12 @@
             });
         })();
         </script>
+        
+        <!-- 不蒜子访客统计 -->
+        <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <div style="display:none;">
+            <span id="busuanzi_value_site_pv"></span>
+            <span id="busuanzi_value_site_uv"></span>
+        </div>
     </body>
 </html>

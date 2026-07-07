@@ -1,15 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>基础操作 - tag - wyfrg blog</title>
-        <link>https://wyfblog.ccwu.cc/tags/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
-        <description>基础操作 - tag - wyfrg blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Mon, 06 Jul 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://wyfblog.ccwu.cc/tags/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/" rel="self" type="application/rss+xml" /><item>
-    <title>电脑新手入门教程：从零开始学电脑</title>
-    <link>https://wyfblog.ccwu.cc/posts/%E7%94%B5%E8%84%91%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
-    <pubDate>Mon, 06 Jul 2026 00:00:00 &#43;0000</pubDate>
-    <author>wyf</author>
-    <guid>https://wyfblog.ccwu.cc/posts/%E7%94%B5%E8%84%91%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[<h1 id="电脑新手入门教程从零开始学电脑">电脑新手入门教程：从零开始学电脑</h1>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>基础操作 - tag - wyfrg blog</title><link>https://wyfblog.ccwu.cc/tags/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link><description>基础操作 - tag - wyfrg blog</description><generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wyfblog.ccwu.cc/tags/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/" rel="self" type="application/rss+xml"/><item><title>电脑新手入门教程：从零开始学电脑</title><link>https://wyfblog.ccwu.cc/posts/%E7%94%B5%E8%84%91%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link><pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate><author>wyf</author><guid>https://wyfblog.ccwu.cc/posts/%E7%94%B5%E8%84%91%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid><description><![CDATA[<h1 id="电脑新手入门教程从零开始学电脑">电脑新手入门教程：从零开始学电脑</h1>
 <h2 id="前言">前言</h2>
 <p>对于刚接触电脑的新手来说，电脑可能会显得复杂和神秘。本教程将从最基础的知识开始，帮助您一步步掌握电脑的基本操作，让您能够自信地使用电脑进行日常工作和娱乐。</p>
 <hr>
@@ -264,7 +253,4 @@
 </ol>
 <h3 id="43-杀毒软件">4.3 杀毒软件</h3>
 <h4 id="windows-defender自带">Windows Defender（自带）</h4>
-<p>Windows 10/11自带的杀毒软件，基本够用。</p>]]></description>
-</item>
-</channel>
-</rss>
+<p>Windows 10/11自带的杀毒软件，基本够用。</p>]]></description></item></channel></rss>

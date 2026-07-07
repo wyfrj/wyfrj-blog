@@ -1,0 +1,92 @@
+/* 灯箱效果样式 */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10001;
+    transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.2);
+}
+
+/* 文章内容图片样式 */
+.single-page #content img {
+    cursor: zoom-in;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+.single-page #content img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 代码块暗色模式适配 */
+body[theme="dark"] .code-block {
+    background: #1e1e1e;
+    border: 1px solid #333;
+}
+
+body[theme="dark"] .code-block pre {
+    background: #1e1e1e;
+    color: #d4d4d4;
+}
+
+body[theme="dark"] .code-block .lnt {
+    color: #858585;
+}
+
+body[theme="dark"] .code-block .ln {
+    color: #858585;
+}
+
+body[theme="dark"] .code-copy-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #999;
+}
+
+body[theme="dark"] .code-copy-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
