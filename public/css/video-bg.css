@@ -43,6 +43,11 @@ body {
     z-index: 1;
 }
 
+/* 文章页面 - 移除wrapper的z-index让背景正常显示 */
+.single-page .wrapper {
+    z-index: 0;
+}
+
 /* Dark theme adjustments - 视频背景更暗，文字更清晰 */
 body[theme="dark"] .video-overlay {
     background: rgba(0, 0, 0, 0.75);

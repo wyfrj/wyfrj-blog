@@ -1,46 +1,16 @@
 /* 文章页面静态图片背景 - 随页面滚动 */
-.image-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-    background-color: #1a1a2e;
-}
-
-.image-bg-desktop,
-.image-bg-mobile {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.single-page {
+    background-image: url('/images/post-bg-desktop.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
-/* 桌面端显示桌面版图片 */
-.image-bg-desktop {
-    display: block;
-}
-
-/* 移动端显示移动版图片 */
-.image-bg-mobile {
-    display: none;
-}
-
-/* 移动端切换 */
+/* 移动端使用移动版图片 */
 @media (max-width: 768px) {
-    .image-bg-desktop {
-        display: none;
-    }
-    
-    .image-bg-mobile {
-        display: block;
-        background-size: cover;
+    .single-page {
+        background-image: url('/images/post-bg-mobile.jpg');
     }
 }
 

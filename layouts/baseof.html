@@ -38,12 +38,7 @@
 
         {{- /* Background: Video for homepage, Image for single pages */ -}}
         {{- if .IsPage }}
-        {{- /* 静态图片背景 - 文章页面 */ -}}
-        <div class="image-background">
-            <div class="image-bg-desktop" style="background-image: url('/images/post-bg-desktop.jpg');"></div>
-            <div class="image-bg-mobile" style="background-image: url('/images/post-bg-mobile.jpg');"></div>
-            <div class="video-overlay"></div>
-        </div>
+        {{- /* 文章页面使用CSS背景图片，无需额外div */ -}}
         {{- else }}
         {{- /* 视频背景 - 首页 */ -}}
         <div class="video-background">
