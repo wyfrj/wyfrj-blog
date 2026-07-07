@@ -1,16 +1,18 @@
 /* 文章页面静态图片背景 - 随页面滚动 */
 .single-page {
     background-image: url('/images/post-bg-desktop.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: 100% auto;
+    background-position: center top;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    background-color: #1a1a2e;
 }
 
 /* 移动端使用移动版图片 */
 @media (max-width: 768px) {
     .single-page {
         background-image: url('/images/post-bg-mobile.jpg');
+        background-size: 100% auto;
     }
 }
 
