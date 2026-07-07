@@ -431,7 +431,7 @@ body[theme="dark"] #toc-auto::-webkit-scrollbar-thumb {
 }
 .single-page::before {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
