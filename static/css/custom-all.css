@@ -747,39 +747,56 @@ body[theme="dark"] .busuanzi-counter .counter-value {
     color: #8ab4f8;
 }
 
-/* --- 修复header溢出 - 搜索和暗色模式按钮显示 --- */
-#header-desktop .header-wrapper {
-    padding: 0 2rem 0 2rem;
+/* ====== HEADER修复 - 搜索和暗色模式按钮 ====== */
+header#header-desktop {
+    overflow: visible !important;
 }
-#header-desktop .header-wrapper .menu {
-    overflow: visible;
+header#header-desktop .header-wrapper {
+    padding: 0 2rem 0 2rem !important;
+    overflow: visible !important;
 }
-#header-desktop .header-wrapper .menu .menu-inner {
-    display: flex;
-    align-items: center;
-    float: none;
+header#header-desktop .header-wrapper .menu {
+    overflow: visible !important;
 }
-/* 搜索按钮 - 添加边框让其可见 */
-#header-desktop .menu .search input {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+header#header-desktop .header-wrapper .menu .menu-inner {
+    display: flex !important;
+    align-items: center !important;
+    float: none !important;
+    overflow: visible !important;
 }
-body[theme="dark"] #header-desktop .menu .search input {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
+/* 搜索按钮可见 */
+header#header-desktop .menu .menu-item.search {
+    position: relative !important;
+    margin: 0 0.5rem !important;
 }
-/* 暗色模式按钮 - 确保图标可见 */
-#header-desktop .menu .theme-switch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
+header#header-desktop .menu .search input {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
 }
-#header-desktop .menu .theme-switch i {
-    font-size: 1rem;
-    color: #333;
+header#header-desktop .menu .search .search-button {
+    color: #333 !important;
 }
-body[theme="dark"] #header-desktop .menu .theme-switch i {
-    color: #fff;
+body[theme="dark"] header#header-desktop .menu .search input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+}
+body[theme="dark"] header#header-desktop .menu .search .search-button {
+    color: #fff !important;
+}
+/* 暗色模式按钮可见 */
+header#header-desktop .menu .theme-switch {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    margin: 0 0.5rem !important;
+}
+header#header-desktop .menu .theme-switch i {
+    font-size: 1rem !important;
+    color: #333 !important;
+    display: inline !important;
+}
+body[theme="dark"] header#header-desktop .menu .theme-switch i {
+    color: #eee !important;
 }
