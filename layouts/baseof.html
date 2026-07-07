@@ -12,10 +12,6 @@
         {{- partial "head/link.html" . -}}
         {{- partial "head/seo.html" . -}}
         <link rel="stylesheet" href="/css/custom-all.css">
-        <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-        <link rel="preconnect" href="https://uapis.cn" crossorigin>
-        <link rel="preconnect" href="https://busuanzi.ibruce.info" crossorigin>
     </head>
     <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}"{{ if .IsPage }} class="single-page"{{ end }}>
         {{- /* Check theme isDark before body rendering */ -}}
