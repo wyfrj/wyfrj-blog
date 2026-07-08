@@ -70,7 +70,7 @@ paginate = 10
   # Footer config
   [params.footer]
     enable = true
-    custom = ""
+    custom = "<div style=\"text-align: center; margin-top: 20px;\"><a href=\"https://www.netlify.com/\"><img src=\"https://www.netlify.com/img/badge/netlify-dark-color-bg.svg\" alt=\"Deploys by Netlify\" /></a></div><div style=\"text-align: center; margin-top: 10px;\"><a href=\"/CODE_OF_CONDUCT.md\">行为准则</a></div>"
     hugo = true
     copyright = true
     author = true
@@ -217,6 +217,12 @@ paginate = 10
   name = '归档'
   url = '/archives/'
   weight = 40
+
+[[menu.main]]
+  identifier = 'coc'
+  name = '行为准则'
+  url = '/CODE_OF_CONDUCT.md'
+  weight = 50
 
 # Markup配置
 [markup]
