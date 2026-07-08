@@ -1,256 +1,256 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>基础操作 - tag - wyfrg blog</title><link>https://wyfblog.ccwu.cc/tags/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link><description>基础操作 - tag - wyfrg blog</description><generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wyfblog.ccwu.cc/tags/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/" rel="self" type="application/rss+xml"/><item><title>电脑新手入门教程：从零开始学电脑</title><link>https://wyfblog.ccwu.cc/posts/%E7%94%B5%E8%84%91%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link><pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate><author>wyf</author><guid>https://wyfblog.ccwu.cc/posts/%E7%94%B5%E8%84%91%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid><description><![CDATA[<h1 id="电脑新手入门教程从零开始学电脑">电脑新手入门教程：从零开始学电脑</h1>
-<h2 id="前言">前言</h2>
-<p>对于刚接触电脑的新手来说，电脑可能会显得复杂和神秘。本教程将从最基础的知识开始，帮助您一步步掌握电脑的基本操作，让您能够自信地使用电脑进行日常工作和娱乐。</p>
-<hr>
-<h2 id="第一章认识电脑">第一章：认识电脑</h2>
-<h3 id="11-电脑的主要组成部分">1.1 电脑的主要组成部分</h3>
-<h4 id="硬件部分">硬件部分</h4>
-<table>
-	<thead>
-			<tr>
-					<th>部件</th>
-					<th>功能说明</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><strong>显示器</strong></td>
-					<td>显示电脑输出的图像和文字信息</td>
-			</tr>
-			<tr>
-					<td><strong>主机</strong></td>
-					<td>电脑的核心部分，包含处理器、内存等</td>
-			</tr>
-			<tr>
-					<td><strong>键盘</strong></td>
-					<td>用于输入文字和命令</td>
-			</tr>
-			<tr>
-					<td><strong>鼠标</strong></td>
-					<td>用于点击、选择和操作屏幕上的元素</td>
-			</tr>
-			<tr>
-					<td><strong>音箱/耳机</strong></td>
-					<td>用于播放声音</td>
-			</tr>
-	</tbody>
-</table>
-<h4 id="主机内部结构">主机内部结构</h4>
-<ul>
-<li><strong>CPU（处理器）</strong>：电脑的&quot;大脑&quot;，负责处理各种数据</li>
-<li><strong>内存（RAM）</strong>：临时存储正在使用的数据，关机后消失</li>
-<li><strong>硬盘（HDD/SSD）</strong>：永久存储文件和程序</li>
-<li><strong>主板</strong>：连接所有硬件的&quot;桥梁&quot;</li>
-<li><strong>电源</strong>：为所有硬件供电</li>
-</ul>
-<h3 id="12-电脑的启动与关闭">1.2 电脑的启动与关闭</h3>
-<h4 id="正确的开机步骤">正确的开机步骤</h4>
-<ol>
-<li>确保所有电源线已连接</li>
-<li>按下显示器的电源按钮</li>
-<li>按下主机的电源按钮（通常在主机正面）</li>
-<li>等待系统启动完成</li>
-</ol>
-<h4 id="正确的关机步骤">正确的关机步骤</h4>
-<ol>
-<li>保存所有正在编辑的文件</li>
-<li>关闭所有打开的程序</li>
-<li>点击屏幕左下角的&quot;开始&quot;按钮</li>
-<li>选择&quot;关机&quot;选项</li>
-<li>等待电脑完全关闭后再关闭电源</li>
-</ol>
-<blockquote>
-<p>⚠️ <strong>注意</strong>：不要直接按电源键强制关机，这可能会导致数据丢失或系统损坏。</p>
-</blockquote>
-<hr>
-<h2 id="第二章windows系统基础操作">第二章：Windows系统基础操作</h2>
-<h3 id="21-桌面认识">2.1 桌面认识</h3>
-<p>Windows桌面主要包含以下元素：</p>
-<ul>
-<li><strong>桌面背景</strong>：显示在所有图标后面的图片</li>
-<li><strong>图标</strong>：代表程序或文件的小图片，双击可以打开</li>
-<li><strong>任务栏</strong>：屏幕底部的长条，显示正在运行的程序</li>
-<li><strong>开始菜单</strong>：点击左下角Windows图标打开，包含所有程序</li>
-</ul>
-<h3 id="22-鼠标操作详解">2.2 鼠标操作详解</h3>
-<table>
-	<thead>
-			<tr>
-					<th>操作</th>
-					<th>方法</th>
-					<th>用途</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><strong>单击</strong></td>
-					<td>按一下左键</td>
-					<td>选择项目</td>
-			</tr>
-			<tr>
-					<td><strong>双击</strong></td>
-					<td>快速按两下左键</td>
-					<td>打开项目</td>
-			</tr>
-			<tr>
-					<td><strong>右击</strong></td>
-					<td>按一下右键</td>
-					<td>打开快捷菜单</td>
-			</tr>
-			<tr>
-					<td><strong>拖动</strong></td>
-					<td>按住左键移动</td>
-					<td>移动项目</td>
-			</tr>
-			<tr>
-					<td><strong>滚轮</strong></td>
-					<td>上下滚动</td>
-					<td>页面上下滚动</td>
-			</tr>
-	</tbody>
-</table>
-<h3 id="23-键盘基础操作">2.3 键盘基础操作</h3>
-<h4 id="常用快捷键">常用快捷键</h4>
-<table>
-	<thead>
-			<tr>
-					<th>快捷键</th>
-					<th>功能</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><code>Ctrl + C</code></td>
-					<td>复制</td>
-			</tr>
-			<tr>
-					<td><code>Ctrl + V</code></td>
-					<td>粘贴</td>
-			</tr>
-			<tr>
-					<td><code>Ctrl + X</code></td>
-					<td>剪切</td>
-			</tr>
-			<tr>
-					<td><code>Ctrl + Z</code></td>
-					<td>撤销</td>
-			</tr>
-			<tr>
-					<td><code>Ctrl + S</code></td>
-					<td>保存</td>
-			</tr>
-			<tr>
-					<td><code>Alt + F4</code></td>
-					<td>关闭当前窗口</td>
-			</tr>
-			<tr>
-					<td><code>Windows + D</code></td>
-					<td>显示桌面</td>
-			</tr>
-			<tr>
-					<td><code>Windows + E</code></td>
-					<td>打开文件管理器</td>
-			</tr>
-	</tbody>
-</table>
-<h3 id="24-文件管理">2.4 文件管理</h3>
-<h4 id="创建新文件夹">创建新文件夹</h4>
-<ol>
-<li>在想要创建文件夹的位置右击</li>
-<li>选择&quot;新建&quot; → &ldquo;文件夹&rdquo;</li>
-<li>输入文件夹名称</li>
-<li>按回车键确认</li>
-</ol>
-<h4 id="文件的基本操作">文件的基本操作</h4>
-<ul>
-<li><strong>复制</strong>：选中文件 → 右击 → 复制（或 <code>Ctrl + C</code>）</li>
-<li><strong>粘贴</strong>：在目标位置右击 → 粘贴（或 <code>Ctrl + V</code>）</li>
-<li><strong>删除</strong>：选中文件 → 按 <code>Delete</code> 键</li>
-<li><strong>重命名</strong>：选中文件 → 按 <code>F2</code> 键 → 输入新名称</li>
-</ul>
-<hr>
-<h2 id="第三章网络基础">第三章：网络基础</h2>
-<h3 id="31-连接网络">3.1 连接网络</h3>
-<h4 id="wi-fi连接">Wi-Fi连接</h4>
-<ol>
-<li>点击任务栏右下角的网络图标</li>
-<li>选择可用的Wi-Fi网络</li>
-<li>输入密码</li>
-<li>点击&quot;连接&quot;</li>
-</ol>
-<h4 id="有线网络">有线网络</h4>
-<ol>
-<li>将网线一端插入电脑</li>
-<li>将另一端插入路由器或交换机</li>
-<li>电脑通常会自动连接</li>
-</ol>
-<h3 id="32-浏览器使用">3.2 浏览器使用</h3>
-<h4 id="常用浏览器">常用浏览器</h4>
-<ul>
-<li>Microsoft Edge（Windows自带）</li>
-<li>Google Chrome</li>
-<li>Firefox</li>
-</ul>
-<h4 id="基本操作">基本操作</h4>
-<ol>
-<li><strong>打开网站</strong>：在地址栏输入网址，按回车</li>
-<li><strong>收藏网站</strong>：点击地址栏旁的星形图标</li>
-<li><strong>新建标签页</strong>：按 <code>Ctrl + T</code></li>
-<li><strong>关闭标签页</strong>：按 <code>Ctrl + W</code></li>
-</ol>
-<h3 id="33-搜索信息">3.3 搜索信息</h3>
-<ol>
-<li>打开浏览器</li>
-<li>在搜索框输入关键词</li>
-<li>按回车键查看搜索结果</li>
-<li>点击感兴趣的链接查看详细内容</li>
-</ol>
-<hr>
-<h2 id="第四章常用软件">第四章：常用软件</h2>
-<h3 id="41-办公软件">4.1 办公软件</h3>
-<h4 id="microsoft-office--wps-office">Microsoft Office / WPS Office</h4>
-<table>
-	<thead>
-			<tr>
-					<th>软件</th>
-					<th>用途</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><strong>Word</strong></td>
-					<td>文档编辑、写作</td>
-			</tr>
-			<tr>
-					<td><strong>Excel</strong></td>
-					<td>表格处理、数据计算</td>
-			</tr>
-			<tr>
-					<td><strong>PowerPoint</strong></td>
-					<td>制作演示文稿</td>
-			</tr>
-	</tbody>
-</table>
-<h3 id="42-文件压缩解压">4.2 文件压缩/解压</h3>
-<h4 id="常用压缩软件">常用压缩软件</h4>
-<ul>
-<li>WinRAR</li>
-<li>7-Zip（免费）</li>
-<li>Bandizip</li>
-</ul>
-<h4 id="压缩文件">压缩文件</h4>
-<ol>
-<li>选中要压缩的文件</li>
-<li>右击 → 选择压缩软件</li>
-<li>选择压缩选项</li>
-<li>点击&quot;确定&quot;</li>
-</ol>
-<h4 id="解压文件">解压文件</h4>
-<ol>
-<li>右击压缩文件</li>
-<li>选择&quot;解压到当前文件夹&quot;或指定位置</li>
-<li>等待解压完成</li>
-</ol>
-<h3 id="43-杀毒软件">4.3 杀毒软件</h3>
-<h4 id="windows-defender自带">Windows Defender（自带）</h4>
-<p>Windows 10/11自带的杀毒软件，基本够用。</p>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>基础操作 on wyfrg blog</title><link>https://wyfblog.ccwu.cc/tags/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link><description>Recent content in 基础操作 on wyfrg blog</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wyfblog.ccwu.cc/tags/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>电脑新手入门教程：从零开始学电脑</title><link>https://wyfblog.ccwu.cc/posts/%E7%94%B5%E8%84%91%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link><pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate><guid>https://wyfblog.ccwu.cc/posts/%E7%94%B5%E8%84%91%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;h1 id="电脑新手入门教程从零开始学电脑"&gt;电脑新手入门教程：从零开始学电脑&lt;/h1&gt;
+&lt;h2 id="前言"&gt;前言&lt;/h2&gt;
+&lt;p&gt;对于刚接触电脑的新手来说，电脑可能会显得复杂和神秘。本教程将从最基础的知识开始，帮助您一步步掌握电脑的基本操作，让您能够自信地使用电脑进行日常工作和娱乐。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第一章认识电脑"&gt;第一章：认识电脑&lt;/h2&gt;
+&lt;h3 id="11-电脑的主要组成部分"&gt;1.1 电脑的主要组成部分&lt;/h3&gt;
+&lt;h4 id="硬件部分"&gt;硬件部分&lt;/h4&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;部件&lt;/th&gt;
+					&lt;th&gt;功能说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;显示器&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;显示电脑输出的图像和文字信息&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;主机&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;电脑的核心部分，包含处理器、内存等&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;键盘&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;用于输入文字和命令&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;鼠标&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;用于点击、选择和操作屏幕上的元素&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;音箱/耳机&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;用于播放声音&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="主机内部结构"&gt;主机内部结构&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CPU（处理器）&lt;/strong&gt;：电脑的&amp;quot;大脑&amp;quot;，负责处理各种数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存（RAM）&lt;/strong&gt;：临时存储正在使用的数据，关机后消失&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;硬盘（HDD/SSD）&lt;/strong&gt;：永久存储文件和程序&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主板&lt;/strong&gt;：连接所有硬件的&amp;quot;桥梁&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;电源&lt;/strong&gt;：为所有硬件供电&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="12-电脑的启动与关闭"&gt;1.2 电脑的启动与关闭&lt;/h3&gt;
+&lt;h4 id="正确的开机步骤"&gt;正确的开机步骤&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;确保所有电源线已连接&lt;/li&gt;
+&lt;li&gt;按下显示器的电源按钮&lt;/li&gt;
+&lt;li&gt;按下主机的电源按钮（通常在主机正面）&lt;/li&gt;
+&lt;li&gt;等待系统启动完成&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="正确的关机步骤"&gt;正确的关机步骤&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;保存所有正在编辑的文件&lt;/li&gt;
+&lt;li&gt;关闭所有打开的程序&lt;/li&gt;
+&lt;li&gt;点击屏幕左下角的&amp;quot;开始&amp;quot;按钮&lt;/li&gt;
+&lt;li&gt;选择&amp;quot;关机&amp;quot;选项&lt;/li&gt;
+&lt;li&gt;等待电脑完全关闭后再关闭电源&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;注意&lt;/strong&gt;：不要直接按电源键强制关机，这可能会导致数据丢失或系统损坏。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="第二章windows系统基础操作"&gt;第二章：Windows系统基础操作&lt;/h2&gt;
+&lt;h3 id="21-桌面认识"&gt;2.1 桌面认识&lt;/h3&gt;
+&lt;p&gt;Windows桌面主要包含以下元素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;桌面背景&lt;/strong&gt;：显示在所有图标后面的图片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图标&lt;/strong&gt;：代表程序或文件的小图片，双击可以打开&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;任务栏&lt;/strong&gt;：屏幕底部的长条，显示正在运行的程序&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开始菜单&lt;/strong&gt;：点击左下角Windows图标打开，包含所有程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="22-鼠标操作详解"&gt;2.2 鼠标操作详解&lt;/h3&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;操作&lt;/th&gt;
+					&lt;th&gt;方法&lt;/th&gt;
+					&lt;th&gt;用途&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;单击&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;按一下左键&lt;/td&gt;
+					&lt;td&gt;选择项目&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;双击&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;快速按两下左键&lt;/td&gt;
+					&lt;td&gt;打开项目&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;右击&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;按一下右键&lt;/td&gt;
+					&lt;td&gt;打开快捷菜单&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;拖动&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;按住左键移动&lt;/td&gt;
+					&lt;td&gt;移动项目&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;滚轮&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;上下滚动&lt;/td&gt;
+					&lt;td&gt;页面上下滚动&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="23-键盘基础操作"&gt;2.3 键盘基础操作&lt;/h3&gt;
+&lt;h4 id="常用快捷键"&gt;常用快捷键&lt;/h4&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;快捷键&lt;/th&gt;
+					&lt;th&gt;功能&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Ctrl + C&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;复制&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Ctrl + V&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;粘贴&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Ctrl + X&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;剪切&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Ctrl + Z&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;撤销&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Ctrl + S&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;保存&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Alt + F4&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;关闭当前窗口&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Windows + D&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;显示桌面&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Windows + E&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;打开文件管理器&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="24-文件管理"&gt;2.4 文件管理&lt;/h3&gt;
+&lt;h4 id="创建新文件夹"&gt;创建新文件夹&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;在想要创建文件夹的位置右击&lt;/li&gt;
+&lt;li&gt;选择&amp;quot;新建&amp;quot; → &amp;ldquo;文件夹&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;输入文件夹名称&lt;/li&gt;
+&lt;li&gt;按回车键确认&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="文件的基本操作"&gt;文件的基本操作&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;复制&lt;/strong&gt;：选中文件 → 右击 → 复制（或 &lt;code&gt;Ctrl + C&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;粘贴&lt;/strong&gt;：在目标位置右击 → 粘贴（或 &lt;code&gt;Ctrl + V&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;删除&lt;/strong&gt;：选中文件 → 按 &lt;code&gt;Delete&lt;/code&gt; 键&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重命名&lt;/strong&gt;：选中文件 → 按 &lt;code&gt;F2&lt;/code&gt; 键 → 输入新名称&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="第三章网络基础"&gt;第三章：网络基础&lt;/h2&gt;
+&lt;h3 id="31-连接网络"&gt;3.1 连接网络&lt;/h3&gt;
+&lt;h4 id="wi-fi连接"&gt;Wi-Fi连接&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;点击任务栏右下角的网络图标&lt;/li&gt;
+&lt;li&gt;选择可用的Wi-Fi网络&lt;/li&gt;
+&lt;li&gt;输入密码&lt;/li&gt;
+&lt;li&gt;点击&amp;quot;连接&amp;quot;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="有线网络"&gt;有线网络&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;将网线一端插入电脑&lt;/li&gt;
+&lt;li&gt;将另一端插入路由器或交换机&lt;/li&gt;
+&lt;li&gt;电脑通常会自动连接&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="32-浏览器使用"&gt;3.2 浏览器使用&lt;/h3&gt;
+&lt;h4 id="常用浏览器"&gt;常用浏览器&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft Edge（Windows自带）&lt;/li&gt;
+&lt;li&gt;Google Chrome&lt;/li&gt;
+&lt;li&gt;Firefox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="基本操作"&gt;基本操作&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;打开网站&lt;/strong&gt;：在地址栏输入网址，按回车&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;收藏网站&lt;/strong&gt;：点击地址栏旁的星形图标&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;新建标签页&lt;/strong&gt;：按 &lt;code&gt;Ctrl + T&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关闭标签页&lt;/strong&gt;：按 &lt;code&gt;Ctrl + W&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="33-搜索信息"&gt;3.3 搜索信息&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开浏览器&lt;/li&gt;
+&lt;li&gt;在搜索框输入关键词&lt;/li&gt;
+&lt;li&gt;按回车键查看搜索结果&lt;/li&gt;
+&lt;li&gt;点击感兴趣的链接查看详细内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="第四章常用软件"&gt;第四章：常用软件&lt;/h2&gt;
+&lt;h3 id="41-办公软件"&gt;4.1 办公软件&lt;/h3&gt;
+&lt;h4 id="microsoft-office--wps-office"&gt;Microsoft Office / WPS Office&lt;/h4&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;软件&lt;/th&gt;
+					&lt;th&gt;用途&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Word&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;文档编辑、写作&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Excel&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;表格处理、数据计算&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;PowerPoint&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;制作演示文稿&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="42-文件压缩解压"&gt;4.2 文件压缩/解压&lt;/h3&gt;
+&lt;h4 id="常用压缩软件"&gt;常用压缩软件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;WinRAR&lt;/li&gt;
+&lt;li&gt;7-Zip（免费）&lt;/li&gt;
+&lt;li&gt;Bandizip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="压缩文件"&gt;压缩文件&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;选中要压缩的文件&lt;/li&gt;
+&lt;li&gt;右击 → 选择压缩软件&lt;/li&gt;
+&lt;li&gt;选择压缩选项&lt;/li&gt;
+&lt;li&gt;点击&amp;quot;确定&amp;quot;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="解压文件"&gt;解压文件&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;右击压缩文件&lt;/li&gt;
+&lt;li&gt;选择&amp;quot;解压到当前文件夹&amp;quot;或指定位置&lt;/li&gt;
+&lt;li&gt;等待解压完成&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="43-杀毒软件"&gt;4.3 杀毒软件&lt;/h3&gt;
+&lt;h4 id="windows-defender自带"&gt;Windows Defender（自带）&lt;/h4&gt;
+&lt;p&gt;Windows 10/11自带的杀毒软件，基本够用。&lt;/p&gt;</description></item></channel></rss>
