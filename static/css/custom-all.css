@@ -48,9 +48,6 @@ body {
     position: relative;
     z-index: 1;
 }
-.single-page .wrapper {
-    z-index: 0;
-}
 body[theme="dark"] .video-overlay {
     background: rgba(0, 0, 0, 0.75);
 }
@@ -104,27 +101,6 @@ input[type="tel"], textarea, [contenteditable="true"],
 }
 video {
     cursor: url('/images/cursor/pointer.png'), default !important;
-}
-
-/* --- page-load.css --- */
-body {
-    opacity: 1;
-}
-.page {
-    animation: fadeInUp 0.6s ease-out 0.3s forwards;
-    opacity: 0;
-}
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.home-profile {
-    animation: fadeInScale 0.8s ease-out 0.2s forwards;
-    opacity: 0;
-}
-@keyframes fadeInScale {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
 }
 
 /* --- scroll-animate.css --- */
@@ -195,37 +171,6 @@ body {
     #menu-mobile.active .menu-item:nth-child(3) { transition-delay: 0.2s; }
     #menu-mobile.active .menu-item:nth-child(4) { transition-delay: 0.25s; }
     #menu-mobile.active .menu-item:nth-child(5) { transition-delay: 0.3s; }
-    .menu-toggle {
-        width: 30px;
-        height: 24px;
-        position: relative;
-        cursor: pointer;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background: currentColor;
-        position: absolute;
-        left: 0;
-        transition: all 0.3s ease;
-        border-radius: 2px;
-    }
-    .menu-toggle span:nth-child(1) { top: 0; }
-    .menu-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
-    .menu-toggle span:nth-child(3) { bottom: 0; }
-    .menu-toggle.active span:nth-child(1) {
-        top: 50%;
-        transform: translateY(-50%) rotate(45deg);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    .menu-toggle.active span:nth-child(3) {
-        bottom: 50%;
-        transform: translateY(50%) rotate(-45deg);
-    }
 }
 
 /* --- bottom-nav.css --- */
@@ -306,32 +251,6 @@ body {
     }
     body[theme="dark"] .bottom-nav-item.active::before {
         background: #8ab4f8;
-    }
-    .bottom-nav-item.hitokoto {
-        position: relative;
-    }
-    .bottom-nav-item.hitokoto .hitokoto-tooltip {
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 8px 12px;
-        border-radius: 8px;
-        font-size: 12px;
-        white-space: nowrap;
-        max-width: 200px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        margin-bottom: 8px;
-    }
-    .bottom-nav-item.hitokoto:hover .hitokoto-tooltip {
-        opacity: 1;
-        visibility: visible;
     }
     #back-to-top {
         display: none;
