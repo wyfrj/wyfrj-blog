@@ -1,7 +1,13 @@
 baseURL = 'https://wyfblog.ccwu.cc/'
 defaultContentLanguage = 'zh'
 title = 'wyfrg blog'
-theme = 'LoveIt'
+theme = 'KeepIt'
+
+# Author config
+[author]
+  name = 'wyf'
+  email = ''
+  link = 'https://github.com/wyfrj'
 
 # 网站图标
 [params.favicon]
@@ -179,21 +185,13 @@ paginate = 10
   # 搜索配置
   [params.search]
     enable = true
-    type = "fuse"
+    type = "lunr"
     contentLength = 4000
     placeholder = ""
     maxResultLength = 10
     snippetLength = 30
     highlightTag = "em"
     absoluteURL = false
-    [params.search.fuse]
-      isCaseSensitive = false
-      minMatchCharLength = 2
-      findAllMatches = false
-      location = 0
-      threshold = 0.3
-      distance = 100
-      ignoreLocation = false
 
 # 导航菜单
 [[menu.main]]
